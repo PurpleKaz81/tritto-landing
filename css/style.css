@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+  --f-primary: 'San Diego', 'cursive';
+  --f-secondary: 'MontserratVariableFontWght', 'cursive';
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #FFFEFA;
+  --clr-dark: #2B2B2B;
+  --clr-accent: #AA0201;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+  }
+}
+
+/* General Styles */
+
+@font-face {
+  font-family: 'San Diego';
+  src: url('fonts/san_diego.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat_italic_variable_font_wght') format('truetype');
+}
+
+@font-face {
+  font-family: 'San Diego';
+  src: url('fonts/montserrat_variable_font_wght') format('truetype');
+}
