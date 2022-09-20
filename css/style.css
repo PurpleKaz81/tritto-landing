@@ -1,15 +1,15 @@
-@font-face {
+/* @font-face {
   font-family: 'san_diegoregular';
-  src: url('san_diego.ttf') format('truetype');
+  src: url('fonts/san_diego.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('fonts/montserrat_italic_variable_font_wght') format('truetype'),
-       url('fonts/montserrat_variable_font_wght') format('truetype');
-}
+  src: url('fonts/montserrat_italic_variable_font_wght.ttf') format('truetype'),
+       url('fonts/montserrat_variable_font_wght.ttf') format('truetype');
+} */
 
 *,
 *::before,
@@ -21,8 +21,8 @@
 
 
 :root {
-  --f-primary: 'san_diegoregular';
-  --f-secondary: 'Montserrat';
+  --f-primary: 'Montserrat', 'sans-serif';
+  --f-secondary: 'Montserrat', 'monospace';
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -57,25 +57,40 @@ body {
   background: var(--clr-dark);
   color: var(--clr-light);
   margin: 0;
+  font-family: var(--f-primary);
+  font-size: var(--f-secondary);
   line-height: 1.6;
 }
 
-h1 {
-  font-family: var(--ff-primary);
-  font-size: var(--fs-h1);
+img {
+  display: block;
+  max-width: 100%;
 }
 
-h2 {
-  font-family: var(--ff-secondary);
-  font-size: var(--fs-h2);
-}
+/* Typography */
 
+h1,
+h2,
 h3 {
-  font-family: var(--ff-seconda);
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.section__title {
+
+}
+
+.section__subtitle {
+  margin: 0;
   font-size: var(--fs-h3);
 }
 
-body {
-  font-family: var(--ff-seconda);
-  font-size: var(--fs-body);
+.section__subtitle--intro,
+.section__subtitle--quem-somos {
+  background-color: var(--clr-dark);
+  font-family: var(--ff-secondary);
 }
