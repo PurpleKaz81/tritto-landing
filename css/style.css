@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'san_diegoregular';
+  src: url('san_diego.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/montserrat_italic_variable_font_wght') format('truetype'),
+       url('fonts/montserrat_variable_font_wght') format('truetype');
+}
+
 *,
 *::before,
 *::after {
@@ -6,22 +19,28 @@
 
 /* Custom Properties */
 
+
 :root {
-  --f-primary: 'San Diego', 'cursive';
-  --f-secondary: 'MontserratVariableFontWght', 'cursive';
+  --f-primary: 'san_diegoregular';
+  --f-secondary: 'Montserrat';
 
   --fw-reg: 300;
   --fw-bold: 900;
 
   --clr-light: #FFFEFA;
   --clr-dark: #2B2B2B;
-  --clr-accent: #AA0201;
+  --clr-gold: #e8d668;
+  --clr-red: #AA0201;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 }
+
+/* @import "fonts/san_diego";
+@import "fonts/montserrat_italic_variable_font_wght";
+@import "fonts/montserrat_variable_font_wght"; */
 
 @media (min-width: 800px) {
   :root {
@@ -34,17 +53,29 @@
 
 /* General Styles */
 
-@font-face {
-  font-family: 'San Diego';
-  src: url('fonts/san_diego.ttf') format('truetype');
+body {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  margin: 0;
+  line-height: 1.6;
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/montserrat_italic_variable_font_wght') format('truetype');
+h1 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h1);
 }
 
-@font-face {
-  font-family: 'San Diego';
-  src: url('fonts/montserrat_variable_font_wght') format('truetype');
+h2 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-family: var(--ff-seconda);
+  font-size: var(--fs-h3);
+}
+
+body {
+  font-family: var(--ff-seconda);
+  font-size: var(--fs-body);
 }
