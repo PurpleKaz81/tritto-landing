@@ -1,15 +1,14 @@
-/* @font-face {
+@font-face {
   font-family: 'san_diegoregular';
-  src: url('fonts/san_diego.ttf') format('truetype');
+  src: url('../fonts/san_diego.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('fonts/montserrat_italic_variable_font_wght.ttf') format('truetype'),
-       url('fonts/montserrat_variable_font_wght.ttf') format('truetype');
-} */
+  src: url('../fonts/montserrat_variable_font_wght.ttf') format('truetype');
+}
 
 *,
 *::before,
@@ -21,15 +20,15 @@
 
 
 :root {
-  --f-primary: 'Montserrat', 'sans-serif';
-  --f-secondary: 'Montserrat', 'monospace';
+  --f-primary: 'san_diegoregular', 'serif';
+  --f-secondary: 'Montserrat', 'sans-serif';
 
   --fw-reg: 300;
   --fw-bold: 900;
 
   --clr-light: #FFFEFA;
   --clr-dark: #2B2B2B;
-  --clr-gold: #e8d668;
+  --clr-gold: #A17323;
   --clr-red: #AA0201;
 
   --fs-h1: 3rem;
@@ -54,11 +53,9 @@
 /* General Styles */
 
 body {
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  background: var(--clr-light);
+  color: var(--clr-dark);
   margin: 0;
-  font-family: var(--f-primary);
-  font-size: var(--f-secondary);
   line-height: 1.6;
 }
 
@@ -66,6 +63,8 @@ img {
   display: block;
   max-width: 100%;
 }
+
+strong { font-weight: var(--fw-bold) }
 
 /* Typography */
 
@@ -80,8 +79,25 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
-.section__title {
+h1 {
+  font-family: var(--f-primary);
+}
 
+h2, h3, h4, h5, h6, p, a, img {
+  font-family: var(--f-secondary);
+}
+
+.section__title {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.section__subtitle--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
 }
 
 .section__subtitle {
@@ -91,6 +107,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro,
 .section__subtitle--quem-somos {
-  background-color: var(--clr-dark);
-  font-family: var(--ff-secondary);
+  background: var(--clr-red);
+  font-family: var(--f-secondary);
+  color: var(--clr-gold);
 }
