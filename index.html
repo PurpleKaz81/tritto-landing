@@ -7,34 +7,37 @@
     <title>Cazalli-Tritto - Marketing Jurídico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="img/2.png" alt="">
+      <div class="navbar">
+          <div class="logo">
+            <img src="img/2.png" alt="">
+          </div>
+          <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+          </button>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#home" class="nav__link"></a>Home</li>
+              <li class="nav__item"><a href="#visao" class="nav__link"></a>Visão de Águia</li>
+              <li class="nav__item"><a href="#planos" class="nav__link"></a>Planos</li>
+              <li class="nav__item"><a href="#quem" class="nav__link"></a>Quem Somos</li>
+              <li class="nav__item"><a href="#aguias" class="nav__link"></a>Águias</li>
+              <li class="nav__item"><a href="#contato" class="nav__link"></a>Contato</li>
+            </ul>
+          </nav>
       </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link"></a>Home</li>
-          <li class="nav__item"><a href="#visao" class="nav__link"></a>Visão de Águia</li>
-          <li class="nav__item"><a href="#planos" class="nav__link"></a>Planos</li>
-          <li class="nav__item"><a href="#quem" class="nav__link"></a>Quem Somos</li>
-          <li class="nav__item"><a href="#aguias" class="nav__link"></a>Águias</li>
-          <li class="nav__item"><a href="#contato" class="nav__link"></a>Contato</li>
-        </ul>
-      </nav>
     </header>
 
     <!-- Home -->
 
     <section id="home" class="intro">
       <h1 class="section__title section__title--intro">
-        Bem-Vindo à <strong>Cazalli-Tritto</strong>
+        <strong>Cazalli-Tritto</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">Seja um advogado do futuro</p>
       <img src="img/happy_lawyer.jpg" alt="Advogada do futuro" class="intro__img">
@@ -61,38 +64,39 @@
         <p>Através de uma identidade visual ÚNICA te inserimos no mercado de forma autêntica, elegante e eficiente!</p>
         <p>A sua Advocacia está em fase de mudanças e ela precisa ser vista e ganhar visibilidade no mercado digital. </p>
         <p>Existem dois tipos de conteúdos a serem feitos: para pessoas leigas, seu futuro cliente ou o seu colega Advogado(a), que também pode ser seu cliente através de mentoriais e cursos</p>
-    </section>
 
-    <a href="mailto:ayrtontritto@gmail.com" class="footer__link">email</a>
-    <a href="#contato" class="btn">Contato</a>
+        <a href="mailto:ayrtontritto@gmail.com" class="footer__link">email</a>
+        <a href="#contato" class="btn">Contato</a>
+
+      </section>
 
     <!-- Planos -->
 
     <section id="planos" class="planos">
       <h2 class="section__title section__title--planos">Planos</h2>
-      <div class="planos">
+      <div>
 
         <div class="plano">
           <h3 class="section__subtitle section__subtitle--planos">Plano TJ</h3>
-            <p>O início de uma nova advocacia</p>
+            <p class="section__subtitle section__subtitle--plano">O início de uma nova advocacia</p>
           </div>
         <!-- plano -->
 
         <div class="plano">
           <h3 class="section__subtitle section__subtitle--planos">Plano TRF</h3>
-            <p>Uma advocacia mais robusta</p>
+            <p class="section__subtitle section__subtitle--plano">Uma advocacia mais robusta</p>
           </div>
         <!-- plano -->
 
         <div class="plano">
           <h3 class="section__subtitle section__subtitle--planos">Plano STJ</h3>
-            <p>Um passo para uma autoridade mais ativa</p>
+            <p class="section__subtitle section__subtitle--plano">Um passo para uma autoridade mais ativa</p>
           </div>
         <!-- plano -->
 
         <div class="plano">
           <h3 class="section__subtitle section__subtitle--planos">Plano STF</h3>
-            <p>Uma visibilidade atuante gerando um valor definitivo</p>
+            <p class="section__subtitle section__subtitle--plano">Uma visibilidade atuante gerando um valor definitivo</p>
           </div>
         <!-- plano -->
 

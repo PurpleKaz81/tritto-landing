@@ -28,18 +28,17 @@
 
   --clr-light: #FFFEFA;
   --clr-dark: #2B2B2B;
-  --clr-gold: #A17323;
+  --clr-gold: #d6c65e;
   --clr-red: #AA0201;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-}
 
-/* @import "fonts/san_diego";
-@import "fonts/montserrat_italic_variable_font_wght";
-@import "fonts/montserrat_variable_font_wght"; */
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
 
 @media (min-width: 800px) {
   :root {
@@ -52,7 +51,7 @@
 
 /* General Styles */
 
-body {
+html, body {
   background: var(--clr-light);
   color: var(--clr-dark);
   margin: 0;
@@ -111,19 +110,26 @@ h2, h3, h4, h5, h6, p, a, img {
 .section__subtitle--aguias,
 .section__subtitle--quem-somos,
 .section__subtitle--contato {
-  font-weight: var(--fw-reg);
-}
-
-.section__subtitle--intro,
-.section__subtitle--visao,
-.section__subtitle--planos,
-.section__subtitle--aguias,
-.section__subtitle--quem-somos,
-.section__subtitle--contato {
   background: var(--clr-red);
   font-family: var(--f-secondary);
+  font-weight: var(--fw-reg);
   color: var(--clr-gold);
   margin-bottom: 1em;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em 0 2em;
+}
+
+/* Logo */
+
+.logo {
+  height: 10em;
+  width: 10em;
 }
 
 /* Intro */
@@ -134,6 +140,15 @@ nav { display: none; }
 
 .intro {
   position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -150,7 +165,9 @@ nav { display: none; }
 
   .intro__img {
     grid-area: img;
-    min-width: 250px;
+    min-width: 400px;
+    position: relative;
+    z-index: 2;
   }
 
   .section__subtitle--intro {
@@ -163,3 +180,59 @@ nav { display: none; }
     width: calc(100% + 1.5em)
   }
 }
+
+/* Visão de Águia */
+
+
+
+/* Planos */
+
+.planos {
+  background: no-repeat;
+  background-color: var(--clr-light);
+  background-image: url(../img/hand_writing.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--clr-dark);
+  background-blend-mode: multiply;
+  color: var(--clr-dark);
+  text-align: center;
+}
+
+.section__title--planos {
+  color: var(--clr-light);
+  position: relative;
+}
+
+.section__title--planos::after {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: currentColor;;
+  opacity: 0.5;
+}
+
+.section__subtitle--planos {
+  color: var(--clr-gold);
+  text-align: center;;
+}
+
+.plano {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.section__subtitle--plano {
+  color: var(--clr-light);
+  text-align: center;;
+}
+
+/* @media (min-width:800px) {
+  .planos {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto
+  }
+} */
