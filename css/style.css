@@ -92,7 +92,12 @@ h2, h3, h4, h5, h6, p, a, img {
   margin-bottom: .5em;
 }
 
-.section__subtitle--intro {
+.section__subtitle--intro,
+.section__subtitle--visao,
+.section__subtitle--planos,
+.section__subtitle--aguias,
+.section__subtitle--quem-somos,
+.section__subtitle--contato {
   font-weight: var(--fw-reg);
 }
 
@@ -106,7 +111,11 @@ h2, h3, h4, h5, h6, p, a, img {
 }
 
 .section__subtitle--intro,
-.section__subtitle--quem-somos {
+.section__subtitle--visao,
+.section__subtitle--planos,
+.section__subtitle--aguias,
+.section__subtitle--quem-somos,
+.section__subtitle--contato {
   background: var(--clr-red);
   font-family: var(--f-secondary);
   color: var(--clr-gold);
