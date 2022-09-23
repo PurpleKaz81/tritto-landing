@@ -214,7 +214,9 @@ nav { display: none; }
 
 /* Visão de Águia */
 
+.visao {
 
+}
 
 /* Planos */
 
@@ -254,10 +256,10 @@ nav { display: none; }
 }
 
 @media (min-width: 800px) {
-  .services {
-    display: flex;
+  .planos {
+    /* display: flex; */
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   /* .plano + .plano {
@@ -274,4 +276,32 @@ nav { display: none; }
 .section__subtitle--plano {
   color: var(--clr-light);
   text-align: center;;
+}
+
+/* Quem Somos */
+
+.quem-somos{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .quem-somos {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img"
+  }
+
+  .section__title--quem-somos {
+    grid-area: title;
+
+  }
+
+  .quem-somos__img {
+    grid-row: 1 / -1;
+    grid-column: 2/;
+  }
 }
