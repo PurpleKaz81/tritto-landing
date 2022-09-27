@@ -318,6 +318,33 @@ nav { display: none; }
   color: var(--clr-light);
   text-align: center;
   padding: 1em 2em 1em 2em;
+  background: no-repeat;
+  background-color: var(--clr-light);
+  background-image: url(../img/hall_of_justice.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--clr-dark);
+  background-blend-mode: multiply;
+  color: var(--clr-dark);
+  text-align: center;
+  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__title--aguias {
+  color: var(--clr-light);
+  position: relative;
+}
+
+.aguias-headers {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__subtitle--aguias {
+  width: 20em;
 }
 
 .gerenciados {
