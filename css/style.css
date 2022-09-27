@@ -131,7 +131,6 @@ h2, h3, h4, h5, h6, p, a, img {
 .section__subtitle--intro,
 .section__subtitle--visao,
 .section__subtitle--planos,
-.section__subtitle--aguias,
 .section__subtitle--quem-somos,
 .section__subtitle--contato {
   background: var(--clr-red);
@@ -139,7 +138,18 @@ h2, h3, h4, h5, h6, p, a, img {
   font-weight: var(--fw-reg);
   color: var(--clr-gold);
   margin-bottom: 1em;
+  padding: 0.125em;
 }
+
+.section__subtitle--aguias {
+  background: var(--clr-red);
+  font-family: var(--f-secondary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-gold);
+  margin-bottom: 1em;
+  padding: 0.125em;
+}
+
 
 /* Navbar */
 
@@ -326,4 +336,18 @@ nav { display: none; }
     position: relative;
     z-index: 2;
   }
+}
+
+/* Águias */
+
+.aguias {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.gerenciados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 0 auto;
 }
