@@ -275,7 +275,9 @@ nav { display: none; }
 
 .section__subtitle--plano {
   color: var(--clr-light);
-  text-align: center;;
+  text-align: center;
+  text-justify: inter-word;
+  margin-bottom: 1em;
 }
 
 /* Quem Somos */
@@ -292,16 +294,20 @@ nav { display: none; }
     grid-template-areas:
       "title img"
       "subtitle img"
-      "text img"
+      "text img";
+    grid-column-gap: 2em;
   }
 
   .section__title--quem-somos {
     grid-area: title;
+  }
 
+  .section__paragraph--quem-somos {
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .quem-somos__img {
-    grid-row: 1 / -1;
-    grid-column: 2/;
+    grid-area: img;
   }
 }
