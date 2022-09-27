@@ -287,6 +287,10 @@ nav { display: none; }
   margin: 0 auto;
 }
 
+.quem-somos__img {
+  box-shadow: var(--bs);
+}
+
 @media (min-width: 600px) {
   .quem-somos {
     display: grid;
@@ -302,6 +306,16 @@ nav { display: none; }
     grid-area: title;
   }
 
+  .section__subtitle--quem-somos {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+  }
+
   .section__paragraph--quem-somos {
     text-align: justify;
     text-justify: inter-word;
@@ -309,5 +323,7 @@ nav { display: none; }
 
   .quem-somos__img {
     grid-area: img;
+    position: relative;
+    z-index: 2;
   }
 }
