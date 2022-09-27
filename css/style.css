@@ -51,12 +51,12 @@
 
 /* General Styles */
 
-/* html, body {
+html, body {
   background: var(--clr-light);
   color: var(--clr-dark);
   margin: 0;
   line-height: 1.6;
-} */
+}
 
 section {
   padding: 2em 2em;
@@ -87,6 +87,7 @@ strong { font-weight: var(--fw-bold) }
   letter-spacing: 2px;
   font-weight: bold;
   transition: transform 200ms ease-in-out;
+  margin-top: 2em;
 }
 
 .btn:hover {
@@ -146,8 +147,24 @@ h2, h3, h4, h5, h6, p, a, img {
   font-family: var(--f-secondary);
   font-weight: var(--fw-bold);
   color: var(--clr-gold);
+  margin-bottom: 2em;
+  padding: 0.125em;
+}
+
+.section__title--aguia {
+  font-family: var(--f-secondary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-light);
   margin-bottom: 1em;
   padding: 0.125em;
+}
+
+.section__subtitle--aguia {
+  font-family: var(--f-secondary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-light);
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 
@@ -268,7 +285,7 @@ nav { display: none; }
 @media (min-width: 800px) {
   .planos {
     /* display: flex; */
-    max-width: 1000px;
+    max-width: 965px;
     margin: 0 auto;
   }
 
@@ -278,7 +295,7 @@ nav { display: none; }
 }
 
 .plano {
-  max-width: 500px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -288,6 +305,66 @@ nav { display: none; }
   text-align: center;
   text-justify: inter-word;
   margin-bottom: 1em;
+}
+
+/* Águias */
+
+.aguias-container {
+  padding: 2em 0em 0em 0em;
+}
+
+.aguias {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+}
+
+.gerenciados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 0 auto;
+}
+
+.aguia {
+  background-color: var(--clr-gold);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.aguia__img {
+  transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.aguia:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.aguia__img:hover,
+.aguia:focus .aguia__img {
+  transform: scale(1.05);
+  opacity: .75;
+}
+
+@media (min-width: 800px) {
+  .aguias {
+    /* display: flex; */
+    max-width: 965px;
+    margin: 0 auto;
+  }
+
+  /* .plano + .plano {
+    margin-left: 2em;
+  } */
+}
+
+.aguia {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Quem Somos */
@@ -336,18 +413,4 @@ nav { display: none; }
     position: relative;
     z-index: 2;
   }
-}
-
-/* Águias */
-
-.aguias {
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  text-align: center;
-}
-
-.gerenciados {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  max-width: 0 auto;
 }
